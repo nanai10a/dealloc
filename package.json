@@ -1,16 +1,20 @@
 {
-  "name": "my-jwc-app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "dealloc",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Nanai Jua <me@n7i.dev>",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {},
+  "engines": {
+    "node": "^18.14.0",
+    "pnpm": "^8.1.1"
+  },
+  "private": true,
   "devDependencies": {
     "jwcjs": "0.1.0-alpha.1",
     "vite": "^4.3.3"
