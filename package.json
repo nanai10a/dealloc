@@ -16,7 +16,10 @@
   },
   "private": true,
   "devDependencies": {
+    "autoprefixer": "^10.4.14",
     "jwcjs": "0.1.0-alpha.1",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2",
     "vite": "^4.3.3"
   }
 }
