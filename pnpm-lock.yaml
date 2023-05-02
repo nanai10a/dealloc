@@ -1,5 +1,10 @@
 lockfileVersion: '6.0'
 
+dependencies:
+  zod:
+    specifier: ^3.21.4
+    version: 3.21.4
+
 devDependencies:
   autoprefixer:
     specifier: ^10.4.14
@@ -905,3 +910,7 @@ packages:
     resolution: {integrity: sha512-CBKFWExMn46Foo4cldiChEzn7S7SRV+wqiluAb6xmueD/fGyRHIhX8m14vVGgeFWjN540nKCNVj6P21eQjgTuA==}
     engines: {node: '>= 14'}
     dev: true
+
+  /zod@3.21.4:
+    resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
+    dev: false
