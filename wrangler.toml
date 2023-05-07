@@ -1,0 +1,9 @@
+name = "dealloc-worker"
+main = "worker.ts"
+
+compatibility_date = "2023-05-06"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# ARENAS_REPO = <UNSET>
+# ARENAS_TOKEN = <UNSET>
