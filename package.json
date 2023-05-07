@@ -28,6 +28,9 @@
     "vite": "^4.3.3",
     "wrangler": "^2.19.0"
   },
+  "optionalDependencies": {
+    "punycode": "^2.3.0"
+  },
   "pnpm": {
     "overrides": {
       "rollup-plugin-inject": "@rollup/plugin-inject"
