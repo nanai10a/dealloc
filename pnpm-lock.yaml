@@ -4,6 +4,9 @@ overrides:
   rollup-plugin-inject: '@rollup/plugin-inject'
 
 dependencies:
+  hono:
+    specifier: ^3.1.8
+    version: 3.1.8
   markdown-it:
     specifier: ^13.0.1
     version: 13.0.1
@@ -1066,6 +1069,11 @@ packages:
     dependencies:
       function-bind: 1.1.1
     dev: true
+
+  /hono@3.1.8:
+    resolution: {integrity: sha512-7UZQWuQaqn8MENla09Jdb28qiR5uXii4xR/TNQuVNxZ3+T+ZixWiQUpJG85BXNqhJ5s1SkPbLGjbc3L5wKsv5g==}
+    engines: {node: '>=16.0.0'}
+    dev: false
 
   /html-rewriter-wasm@0.4.1:
     resolution: {integrity: sha512-lNovG8CMCCmcVB1Q7xggMSf7tqPCijZXaH4gL6iE8BFghdQCbaY5Met9i1x2Ex8m/cZHDUtXK9H6/znKamRP8Q==}
