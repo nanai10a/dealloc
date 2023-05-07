@@ -21,6 +21,7 @@
   "private": true,
   "devDependencies": {
     "@types/markdown-it": "^12.2.3",
+    "@types/node": "^20.1.0",
     "autoprefixer": "^10.4.14",
     "jwcjs": "0.1.0-alpha.1",
     "postcss": "^8.4.23",
