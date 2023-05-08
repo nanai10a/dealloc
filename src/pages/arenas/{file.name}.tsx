@@ -21,7 +21,7 @@ export default function ({ data }: Props) {
 
   return (
     <div>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="arena" dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   );
 }

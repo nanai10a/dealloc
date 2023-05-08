@@ -1,3 +1,67 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .arena * {
+    @apply my-2;
+  }
+
+  .arena h1 {
+    @apply text-6xl;
+  }
+
+  .arena h2 {
+    @apply text-5xl;
+  }
+
+  .arena h3 {
+    @apply text-4xl;
+  }
+
+  .arena h4 {
+    @apply text-3xl;
+  }
+
+  .arena h5 {
+    @apply text-2xl;
+  }
+
+  .arena h6 {
+    @apply text-xl;
+  }
+
+  .arena blockquote {
+    @apply ml-2 pl-2 border-l-4 border-stone-400;
+  }
+
+  .arena ol {
+    @apply block pl-6 list-decimal;
+  }
+
+  .arena ul {
+    @apply block pl-6 list-disc;
+  }
+
+  .arena li > p {
+    @apply inline;
+  }
+
+  .arena pre {
+    @apply p-4 mx-8 bg-stone-200;
+  }
+
+  .arena :not(pre) > code {
+    @apply p-1 bg-stone-200;
+  }
+
+  .arena a {
+    @apply underline;
+  }
+
+  /* href に応じて :after でアイコンを表示
+   * :: ななめみぎうえ
+   * #: ブクマみたいなやつ
+   * /: 接地って感じのやつ
+   */
+}
