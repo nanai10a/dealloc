@@ -49,7 +49,7 @@ export default function ({ data }: PageProps<Queries.IndexQuery>) {
       .flatMap(({ captured, patched }) => ({ captured, patched }))
       .filter(
         (o): o is { captured: string; patched: string } =>
-          typeof o.captured === "string" && typeof o.patched === "string"
+          typeof o.captured === "string" && typeof o.patched === "string",
       )
       .map(({ captured, patched }) => [
         captured.substring(0, 7),
@@ -63,7 +63,7 @@ export default function ({ data }: PageProps<Queries.IndexQuery>) {
 
     return Object.entries(map).sort(
       ([lhs, _0], [rhs, _1]) =>
-        Number(lhs.replaceAll("-", "")) - Number(rhs.replaceAll("-", ""))
+        Number(lhs.replaceAll("-", "")) - Number(rhs.replaceAll("-", "")),
     );
   }, [arenas]);
 
