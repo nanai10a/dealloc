@@ -1,6 +1,5 @@
-import React from "react";
-
 import Layout from "../../components/Layout";
+import React from "react";
 
 import { graphql } from "gatsby";
 export const pageQuery = graphql`
