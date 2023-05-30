@@ -13,15 +13,29 @@ const config: GatsbyConfig = {
       resolve: "gatsby-plugin-postcss",
     },
     {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [],
-      },
+      resolve: "gatsby-plugin-sharp",
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/arenas`,
+      },
+    },
+    {
+      resolve: "gatsby-transformer-sharp"
+    },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              withWebp: true,
+              withAvif: true,
+            },
+          },
+        ],
       },
     },
   ],
