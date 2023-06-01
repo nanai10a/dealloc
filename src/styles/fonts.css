@@ -1,0 +1,51 @@
+/* --- --- --- --- --- ---  LINE Seed JP  --- --- --- --- --- --- */
+@font-face {
+  font-family: "LINE Seed JP";
+
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(/fonts/LINESeedJP_OTF_Th.woff2) format("woff2");
+}
+
+
+@font-face {
+  font-family: "LINE Seed JP";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/LINESeedJP_OTF_Rg.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "LINE Seed JP";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/LINESeedJP_OTF_Bd.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "LINE Seed JP";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(/fonts/LINESeedJP_OTF_Eb.woff2) format("woff2");
+}
+
+/* --- --- --- --- --- --- JetBrains Mono --- --- --- --- --- --- */
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/JetBrainsMono-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/JetBrainsMono-RegularItalic.woff2) format("woff2");
+}
