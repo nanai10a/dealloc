@@ -22,7 +22,7 @@ const config: GatsbyConfig = {
       },
     },
     {
-      resolve: "gatsby-transformer-sharp"
+      resolve: "gatsby-transformer-sharp",
     },
     {
       resolve: "gatsby-transformer-remark",
