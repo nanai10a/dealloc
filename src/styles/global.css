@@ -3,8 +3,16 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-family: "LINE Seed JP";
+  }
+
+  code {
+    font-family: "JetBrains Mono";
+  }
+
   .arena * {
-    @apply my-2;
+    @apply my-4;
   }
 
   .arena h1 {
@@ -12,23 +20,23 @@
   }
 
   .arena h2 {
-    @apply text-5xl;
+    @apply mt-6 mb-4 text-4xl;
   }
 
   .arena h3 {
-    @apply text-4xl;
-  }
-
-  .arena h4 {
     @apply text-3xl;
   }
 
-  .arena h5 {
+  .arena h4 {
     @apply text-2xl;
   }
 
-  .arena h6 {
+  .arena h5 {
     @apply text-xl;
+  }
+
+  .arena h6 {
+    @apply text-lg;
   }
 
   .arena blockquote {
@@ -41,6 +49,10 @@
 
   .arena ul {
     @apply block pl-6 list-disc;
+  }
+
+  .arena li, .arena li ol, .arena li ul {
+    @apply my-2;
   }
 
   .arena li > p {
