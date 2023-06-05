@@ -24,7 +24,7 @@ export const pageQuery = graphql`
   }
 `;
 
-export default function ({ data }: PageProps<Queries.IndexQuery>) {
+export default function ({ data, location }: PageProps<Queries.IndexQuery>) {
   const arenas = React.useMemo(() => {
     return data.allMarkdownRemark.nodes
       .filter((node) => node.frontmatter !== null && node.parent !== null)
@@ -68,7 +68,7 @@ export default function ({ data }: PageProps<Queries.IndexQuery>) {
   }, [arenas]);
 
   return (
-    <Layout>
+    <Layout location={location}>
       <div className="mb-8">
         <h1 className="text-4xl">dealloc</h1>
         <p>--- de-allocated of feelings, thinkings, knowledges, etc</p>

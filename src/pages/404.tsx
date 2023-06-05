@@ -12,9 +12,9 @@ const texts = [
   "",
 ];
 
-export default function ({}: PageProps<{}>) {
+export default function ({ location }: PageProps<{}>) {
   return (
-    <Layout>
+    <Layout location={location}>
       <h1 className="text-6xl">
         {texts[Math.floor(Math.random() * texts.length)]}
       </h1>

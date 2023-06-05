@@ -25,12 +25,12 @@ export function Head({ data }: HeadProps<Queries.ArenasQuery>) {
   );
 }
 
-export default function ({ data }: PageProps<Queries.ArenasQuery>) {
+export default function ({ data, location }: PageProps<Queries.ArenasQuery>) {
   const { html, frontmatter } = data.markdownRemark ?? {};
   const { ident, traits, captured, patched } = frontmatter ?? {};
 
   return (
-    <Layout>
+    <Layout location={location}>
       <div className="max-w-4xl p-8 mx-auto border-2 border-stone-100 rounded-2xl">
         <div className="mb-4">
           <h1 className="text-4xl bold">{ident}</h1>
