@@ -1,13 +1,28 @@
+import { type WindowLocation } from "@reach/router";
+import { Link } from "gatsby";
 import React from "react";
 
 export type Props = {
   children?: React.ReactNode;
+  location: WindowLocation;
 };
 
-export default function ({ children }: Props) {
+export default function ({ children, location }: Props) {
+  const footer = React.useMemo(() => {
+    if (location.pathname === "/") {
+      return <>(c) 2023 Nanai10a</>;
+    } else {
+      return <Link to="/">Back to entry</Link>;
+    }
+  }, [location]);
+
   return (
-    <main className="min-h-screen p-8 bg-stone-800 text-stone-200">
+    <main className="min-h-screen bg-stone-800 text-stone-200">
+      <header></header>
       {children ?? <></>}
+      <footer className="h-12">
+        <p className="w-fit mx-auto mt-4">{footer}</p>
+      </footer>
     </main>
   );
 }
