@@ -3,6 +3,7 @@
 @tailwind utilities;
 @tailwind variants;
 
+/* font settings */
 @layer base {
   html {
     font-family: "LINE Seed JP";
@@ -11,7 +12,10 @@
   code {
     font-family: "JetBrains Mono";
   }
+}
 
+/* for arena renderings */
+@layer base {
   .arena * {
     @apply my-4;
   }
@@ -61,7 +65,7 @@
   }
 
   .arena pre {
-    @apply p-4 mx-8 bg-stone-700 text-stone-100;
+    @apply p-4 mx-8 bg-stone-700 text-stone-100 overflow-x-scroll;
   }
 
   .arena :not(pre) > code {
@@ -80,5 +84,9 @@
 
   .arena hr {
     @apply my-8;
+  }
+
+  .arena br {
+    @apply m-0;
   }
 }
