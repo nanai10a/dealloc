@@ -17,7 +17,7 @@ export default function ({ children, location }: Props) {
   }, [location]);
 
   return (
-    <main className="min-h-screen bg-stone-800 text-stone-200">
+    <main className="min-h-screen bg-stone-800 text-stone-200 flex flex-col justify-between">
       <header></header>
       {children ?? <></>}
       <footer className="h-12">
