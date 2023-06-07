@@ -71,7 +71,7 @@ export default function ({ data, location }: PageProps<Queries.IndexQuery>) {
     <Layout location={location}>
       <div className="px-4 pt-2">
         <h1 className="text-4xl">dealloc</h1>
-        <p className="truncate">
+        <p className="text-sm truncate !overflow-x-scroll">
           de-allocated of feelings, thinkings, knowledges, etc
         </p>
       </div>
@@ -85,11 +85,15 @@ export default function ({ data, location }: PageProps<Queries.IndexQuery>) {
             {arenas.map(({ mangled, ident, traits, captured, patched }) => (
               <li className="my-4 first:mt-0 last:mb-0 border">
                 <Link className="block w-full p-4" to={`/arenas/${mangled}`}>
-                  <p>"{ident}"</p>
-                  <p className="ml-4">::{mangled ?? "{unresolved}"}</p>
-                  <p className="ml-8">: {traits?.join(", ")}</p>
-                  <p>
-                    c/p: {captured} / {patched ?? "no"}
+                  <p className="ml-0">"{ident}"</p>
+                  <p className="ml-4 truncate !overflow-x-scroll before:content-['::']">
+                    {mangled ?? "{unresolved}"}
+                  </p>
+                  <p className="ml-8 truncate !overflow-x-scroll before:content-[':_']">
+                    {traits?.join(", ")}
+                  </p>
+                  <p className="ml-0 truncate !overflow-x-scroll before:content-['c/p:_']">
+                    {captured} / {patched ?? "no"}
                   </p>
                 </Link>
               </li>
@@ -100,28 +104,32 @@ export default function ({ data, location }: PageProps<Queries.IndexQuery>) {
 
       <h2 className="px-4 text-4xl">traits</h2>
       <pre className="my-4 p-4 bg-stone-700 text-stone-100">
-        <code className="w-fit grid grid-cols-2 gap-x-4">
+        <code className="w-fit block relative">
           {traits.map(([name, amount]) => (
-            <>
+            <p>
               <Link className="before:content-['-_']" to={`/traits/${name}`}>
                 {name}
               </Link>
-              <span>({amount})</span>
-            </>
+              <span className="absolute left-[calc(100%_+_1rem)]">
+                ({amount})
+              </span>
+            </p>
           ))}
         </code>
       </pre>
 
       <h2 className="px-4 text-4xl">durations</h2>
       <pre className="mt-4 p-4 bg-stone-700 text-stone-100">
-        <code className="w-fit grid grid-cols-2 gap-x-4">
+        <code className="w-fit block relative">
           {durations.map(([date, amount]) => (
-            <>
+            <p>
               <Link className="before:content-['-_']" to={`/date/${date}`}>
                 {date}
               </Link>
-              <span>({amount})</span>
-            </>
+              <span className="absolute left-[calc(100%_+_1rem)]">
+                ({amount})
+              </span>
+            </p>
           ))}
         </code>
       </pre>
