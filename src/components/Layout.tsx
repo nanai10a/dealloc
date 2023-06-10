@@ -4,10 +4,11 @@ import React from "react";
 
 export type Props = {
   children?: React.ReactNode;
+  className?: string;
   location: WindowLocation;
 };
 
-export default function ({ children, location }: Props) {
+export default function ({ children, className, location }: Props) {
   const footer = React.useMemo(() => {
     if (location.pathname === "/") {
       return <>(c) 2023 Nanai10a</>;
@@ -17,12 +18,13 @@ export default function ({ children, location }: Props) {
   }, [location]);
 
   return (
-    <main className="min-h-screen bg-stone-800 text-stone-200 flex flex-col justify-between">
+    /* see https://experienceleague.adobe.com/docs/target/using/experiences/vec/mobile-viewports.html */
+    <div className="min-w-[360px] min-h-screen x-centralize-col">
       <header></header>
-      {children ?? <></>}
-      <footer className="h-12">
-        <p className="w-fit mx-auto mt-4">{footer}</p>
-      </footer>
-    </main>
+
+      <main className={`grow ${className ?? ""}`}>{children ?? <></>}</main>
+
+      <footer className="my-4">{footer}</footer>
+    </div>
   );
 }

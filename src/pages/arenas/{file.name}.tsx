@@ -30,19 +30,28 @@ export default function ({ data, location }: PageProps<Queries.ArenasQuery>) {
   const { ident, traits, captured, patched } = frontmatter ?? {};
 
   return (
-    <Layout location={location}>
-      <div className="max-w-4xl p-8 mx-auto border-2 border-stone-100 rounded-2xl">
-        <div className="mb-4">
-          <h1 className="text-4xl bold">{ident}</h1>
-          <p>{traits?.join(", ")}</p>
-          <p>{"captured: " + captured + ", patched: " + (patched ?? "no")}</p>
+    <Layout className="w-full max-w-xl" location={location}>
+      <div className="px-4 mt-4">
+        <h1 className="text-4xl">{ident}</h1>
+        <p className="mt-2 text-sm">{traits?.join(", ")}</p>
+        <div className="w-fit mt-2 text-sm">
+          <p className="flex flex-row justify-between gap-2">
+            <span>captured:</span>
+            <span>{captured}</span>
+          </p>
+          <p className="flex flex-row justify-between gap-2">
+            <span>patched:</span>
+            <span>{patched}</span>
+          </p>
         </div>
-
-        <div
-          className="arena"
-          dangerouslySetInnerHTML={{ __html: html ?? "" }}
-        />
       </div>
+
+      <hr className="my-4" />
+
+      <div
+        className="px-4 ctx-arena"
+        dangerouslySetInnerHTML={{ __html: html ?? "" }}
+      />
     </Layout>
   );
 }

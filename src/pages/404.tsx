@@ -4,8 +4,8 @@ import React from "react";
 
 export default function ({ location }: PageProps<{}>) {
   return (
-    <Layout location={location}>
-      <p className="mx-auto">status: 404</p>
+    <Layout className="x-centralize-col" location={location}>
+      status: 404
     </Layout>
   );
 }

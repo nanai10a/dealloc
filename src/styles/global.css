@@ -14,65 +14,87 @@
   }
 }
 
-/* for arena renderings */
+/* base colorings */
 @layer base {
-  .arena * {
+  :root {
+    @apply bg-stone-950;
+  }
+
+  body {
+    @apply bg-stone-950 text-stone-50;
+  }
+}
+
+/* reusable classes */
+@layer utilities {
+  .x-centralize-row {
+    @apply flex flex-row justify-center items-center;
+  }
+
+  .x-centralize-col {
+    @apply flex flex-col justify-center items-center;
+  }
+}
+
+/* for arena renderings */
+@layer components {
+  .ctx-arena * {
     @apply my-4;
   }
 
-  .arena h1 {
+  .ctx-arena h1 {
     @apply text-6xl;
   }
 
-  .arena h2 {
+  .ctx-arena h2 {
     @apply mt-6 mb-4 text-4xl;
   }
 
-  .arena h3 {
+  .ctx-arena h3 {
     @apply text-3xl;
   }
 
-  .arena h4 {
+  .ctx-arena h4 {
     @apply text-2xl;
   }
 
-  .arena h5 {
+  .ctx-arena h5 {
     @apply text-xl;
   }
 
-  .arena h6 {
+  .ctx-arena h6 {
     @apply text-lg;
   }
 
-  .arena blockquote {
-    @apply ml-2 pl-2 border-l-4 border-stone-400;
+  .ctx-arena blockquote {
+    @apply ml-2 pl-2 border-l-4 border-stone-100;
   }
 
-  .arena ol {
+  .ctx-arena ol {
     @apply block pl-6 list-decimal;
   }
 
-  .arena ul {
+  .ctx-arena ul {
     @apply block pl-6 list-disc;
   }
 
-  .arena li, .arena li ol, .arena li ul {
+  .ctx-arena li, .ctx-arena li ol, .ctx-arena li ul {
     @apply my-2;
   }
 
-  .arena li > p {
+  .ctx-arena li > p {
     @apply inline;
   }
 
-  .arena pre {
-    @apply p-4 mx-8 bg-stone-700 text-stone-100 overflow-x-scroll;
+  .ctx-arena pre {
+    @apply p-4 mx-8 border border-stone-50 overflow-x-scroll;
   }
 
-  .arena :not(pre) > code {
-    @apply p-1 bg-stone-700 text-stone-100;
+  .ctx-arena :not(pre) > code {
+    @apply px-1;
   }
 
-  .arena a {
+  .ctx-arena a {
     @apply underline;
   }
 
@@ -82,11 +104,11 @@
    * /: 接地って感じのやつ
    */
 
-  .arena hr {
+  .ctx-arena hr {
     @apply my-8;
   }
 
-  .arena br {
+  .ctx-arena br {
     @apply m-0;
   }
 }
