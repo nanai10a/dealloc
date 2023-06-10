@@ -4,111 +4,28 @@
 @tailwind variants;
 
 /* font settings */
-@layer base {
-  html {
-    font-family: "LINE Seed JP";
-  }
+html {
+  font-family: "LINE Seed JP";
+}
 
-  code {
-    font-family: "JetBrains Mono";
-  }
+code {
+  font-family: "JetBrains Mono";
 }
 
 /* base colorings */
-@layer base {
-  :root {
-    @apply bg-stone-950;
-  }
+:root {
+  @apply bg-stone-950;
+}
 
-  body {
-    @apply bg-stone-950 text-stone-50;
-  }
+body {
+  @apply bg-stone-950 text-stone-50;
 }
 
 /* reusable classes */
-@layer utilities {
-  .x-centralize-row {
-    @apply flex flex-row justify-center items-center;
-  }
-
-  .x-centralize-col {
-    @apply flex flex-col justify-center items-center;
-  }
+.x-centralize-row {
+  @apply flex flex-row justify-center items-center;
 }
 
-/* for arena renderings */
-@layer components {
-  .ctx-arena * {
-    @apply my-4;
-  }
-
-  .ctx-arena h1 {
-    @apply text-6xl;
-  }
-
-  .ctx-arena h2 {
-    @apply mt-6 mb-4 text-4xl;
-  }
-
-  .ctx-arena h3 {
-    @apply text-3xl;
-  }
-
-  .ctx-arena h4 {
-    @apply text-2xl;
-  }
-
-  .ctx-arena h5 {
-    @apply text-xl;
-  }
-
-  .ctx-arena h6 {
-    @apply text-lg;
-  }
-
-  .ctx-arena blockquote {
-    @apply ml-2 pl-2 border-l-4 border-stone-100;
-  }
-
-  .ctx-arena ol {
-    @apply block pl-6 list-decimal;
-  }
-
-  .ctx-arena ul {
-    @apply block pl-6 list-disc;
-  }
-
-  .ctx-arena li, .ctx-arena li ol, .ctx-arena li ul {
-    @apply my-2;
-  }
-
-  .ctx-arena li > p {
-    @apply inline;
-  }
-
-  .ctx-arena pre {
-    @apply p-4 mx-8 border border-stone-50 overflow-x-auto;
-  }
-
-  .ctx-arena :not(pre) > code {
-    @apply px-1;
-  }
-
-  .ctx-arena a {
-    @apply underline;
-  }
-
-  /* href に応じて :after でアイコンを表示
-   * :: ななめみぎうえ
-   * #: ブクマみたいなやつ
-   * /: 接地って感じのやつ
-   */
-
-  .ctx-arena hr {
-    @apply my-8;
-  }
-
-  .ctx-arena br {
-    @apply m-0;
-  }
+.x-centralize-col {
+  @apply flex flex-col justify-center items-center;
 }
