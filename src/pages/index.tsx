@@ -1,36 +1,24 @@
 import { type HeadProps, type PageProps, Link } from "gatsby";
 import Layout from "../components/Layout";
-import u from "../utilities";
 import React from "react";
 
 import { graphql } from "gatsby";
 export const pageQuery = graphql`
   query Index {
-    allMarkdownRemark {
+    allArena {
       nodes {
-        frontmatter {
-          ident
-          traits
-          captured(formatString: "YYYY-MM-DD")
-          patched(formatString: "YYYY-MM-DD")
-        }
-        parent {
-          ... on File {
-            name
-          }
-        }
+        ident
+        mangled
+        traits
+        captured(formatString: "YYYY-MM-DD")
+        patched(formatString: "YYYY-MM-DD")
       }
     }
   }
 `;
 
 export default function ({ data, location }: PageProps<Queries.IndexQuery>) {
-  const arenas = React.useMemo(() => {
-    return data.allMarkdownRemark.nodes
-      .filter((node) => node.frontmatter !== null && node.parent !== null)
-      .map(({ frontmatter, parent }) => ({ ...frontmatter!, ...parent! }))
-      .map((obj) => u.rename(obj, { mangled: "name" }));
-  }, [data]);
+  const arenas = data.allArena.nodes;
 
   const traits = React.useMemo(() => {
     const map = arenas
