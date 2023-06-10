@@ -87,7 +87,7 @@
   }
 
   .ctx-arena pre {
-    @apply p-4 mx-8 border border-stone-50 overflow-x-scroll;
+    @apply p-4 mx-8 border border-stone-50 overflow-x-auto;
   }
 
   .ctx-arena :not(pre) > code {
