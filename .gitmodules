@@ -1,0 +1,4 @@
+[submodule "src/arenas"]
+	path = src/arenas
+	url = https://github.com/Nanai10a/arenas.git
+	branch = master
